@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="Yeeku.H.Lee(CrazyIt.org)" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> 繪製矩形 </title>
+</head>
+<body>
+<h2> 繪製矩形 </h2>
+<canvas id="mc" width="400" height="280"
+	style="border:1px solid black"></canvas>
+<script type="text/javascript">
+	// 獲取canvas元素對應的DOM物件
+	var canvas = document.getElementById('mc');
+	// 獲取在canvas上繪圖的CanvasRenderingContext2D物件
+	var ctx = canvas.getContext('2d');
+	// 設定填充顏色
+	ctx.fillStyle = "rgba(255,0,0,0.4)";
+	// 填充一個矩形
+	ctx.fillRect(30 , 20 , 120 , 60);
+	// 設定線條顏色
+	ctx.strokeStyle = "#00f";
+	// 設定線條寬度
+	ctx.lineWidth = 10;
+	// 繪製一個矩形邊框
+	ctx.strokeRect(30 , 130 , 120 , 60);
+	// 設定線條顏色
+	ctx.strokeStyle = "#0ff";
+	// 設定線條連線風格
+	ctx.lineJoin = "round";
+	// 繪製一個矩形邊框
+	ctx.strokeRect(80 , 160 , 120 , 60);
+	// 設定線條顏色
+	ctx.strokeStyle = "#f0f";
+	// 設定線條連線風格
+	ctx.lineJoin = "bevel";
+	// 繪製一個矩形邊框
+	ctx.strokeRect(130 , 190 , 120 , 60);
+</script>
+</body>
+</html>
