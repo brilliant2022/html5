@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript">
+        function draw_m(){
+            var m_canvas =document.getElementById("m");
+            var m_ctx =m_canvas.getContext("2d");
+            m_ctx.fillStyle ="rgb(200,0,0)";
+            m_ctx.fillRect(100,100,100,100);
+
+        }
+        </script>
+    </head>
+    <body onload="draw_m()">
+        <canvas id="m" width="500" height="300"></canvas>
+        <script type="text/javascript">
+            // 獲取canvas元素對應的DOM物件
+            var canvas = document.getElementById('m');
+            // 獲取在canvas上繪圖的CanvasRenderingContext2D物件
+            var ctx = canvas.getContext('2d');
+            //ctx.fillStyle= "purple";
+            ctx.beginPath();
+            ctx.moveTo(50,50);
+            ctx.lineTo(150,50);
+            ctx.lineTo(50,150);
+            ctx.lineTo(50,50);
+            ctx.closePath();
+            ctx.stroke();
+            // 範例
+            ctx.beginPath();
+            ctx.arc(75,75,50,0,Math.PI*2,true);
+            ctx.moveTo(110,75);
+            ctx.arc(75,75,35,0,Math.PI,false);
+            ctx.moveTo(65,65);
+            ctx.arc(60,65,5,0,Math.PI*2,true);
+            ctx.moveTo(95,65);
+            ctx.arc(90,65,5,0,Math.PI*2,true);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(55,55,20,0,(Math.PI/180)*60,true);
+            ctx.stroke();
+        </script>
+    </body>
+</html>
